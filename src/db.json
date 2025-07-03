@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "5758e909-fb15-4fc9-8a42-0bba691a0ec3",
+      "username": "admin",
+      "password": "admin",
+      "crime": 0,
+      "role": "ADMIN"
+    },
+    {
+      "id": "d4e46690-05ba-40b7-98ea-3dbbb0ee8d21",
+      "username": "admin2",
+      "password": "admin",
+      "crime": 0,
+      "role": "ADMIN"
+    }
+  ],
+  "books": []
+}
