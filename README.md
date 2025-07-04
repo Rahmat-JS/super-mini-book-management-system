@@ -32,35 +32,30 @@ Follow these instructions to get the project up and running on your local machin
     ```
     git clone https://github.com/Rahmat-JS/super-mini-book-management-system.git
     cd super-mini-book-management-system
-    
     ```
     
 2.  **Navigate to the source folder:** All commands should be run from within the `src` directory.
     
     ```
     cd src
-    
     ```
     
 3.  **Create/Reset the Database:** This command initializes a new `database.json` file or resets an existing one.
     
     ```
     npm run resetdb
-    
     ```
     
 4.  **Create an Admin User:** Run this command to create the first admin user. Your admin credentials (username and password) will be displayed in the console. **Save these credentials!**
     
     ```
     npm run createsuperuser
-    
     ```
     
 5.  **Run the Server:** To start the application, use the following command:
     
     ```
     npm start
-    
     ```
     
     By default, the server will be running on `http://localhost:3000`.
@@ -81,7 +76,6 @@ module.exports = {
     port: 3000, // Change port here
     db_name: 'database.json' // Change database file name here
 }
-
 ```
 
 ## API Endpoints
@@ -90,103 +84,34 @@ The following are the available API endpoints.
 
 ### Authentication
 
-Method
-
-Endpoint
-
-Description
-
-`POST`
-
-`/api/register`
-
-Registers a new user.
-
-`POST`
-
-`/api/login`
-
-Logs in a user and returns a session token.
-
-`POST`
-
-`/api/logout`
-
-Logs out the current user.
+| Method | Endpoint | Description |
+|:------:|:--------:|:-----------:|
+| `POST` | `/api/register` | Registers a new user. |
+| `POST` | `/api/login` | Logs in a user and returns a session token. |
+| `POST` | `/api/logout` | Logs out the current user. |
 
 ### User Actions
 
 These endpoints require a valid session token in the request headers.
 
-Method
-
-Endpoint
-
-Description
-
-`GET`
-
-`/api/books`
-
-Retrieves a list of all available books.
-
-`GET`
-
-`/api/books/{bookId}`
-
-Retrieves details for a specific book.
-
-`PUT`
-
-`/api/books/{bookId}/reserve`
-
-Allows a user to reserve a book.
-
-`PUT`
-
-`/api/books/{bookId}/release`
-
-Allows a user to hand over (release) a book.
+| Method | Endpoint | Description |
+|:------:|:--------:|:-----------:|
+| `GET` | `/api/books` | Retrieves a list of all available books. |
+| `GET` | `/api/books/{bookId}` | Retrieves details for a specific book. |
+| `PUT` | `/api/books/{bookId}/reserve` | Allows a user to reserve a book. |
+| `PUT` | `/api/books/{bookId}/release` | Allows a user to hand over (release) a book. |
 
 ### Admin Actions
 
 These endpoints require admin privileges.
 
-Method
-
-Endpoint
-
-Description
-
-`POST`
-
-`/api/books`
-
-Adds a new book to the database.
-
-`PUT`
-
-`/api/books/{bookId}`
-
-Updates the details of an existing book.
-
-`DELETE`
-
-`/api/books/{bookId}`
-
-Removes a book from the database.
-
-`PUT`
-
-`/api/users/{userId}/promote`
-
-Promotes a regular user to an admin.
-
-`PUT`
-
-`/api/users/{userId}/addcrime`
-
-Adds a penalty or "crime" to a user's record.
+| Method | Endpoint | Description |
+|:------:|:--------:|:-----------:|
+| `POST` | `/api/books` | Adds a new book to the database. |
+| `PUT` | `/api/books/{bookId}` | Updates the details of an existing book. |
+| `DELETE` | `/api/books/{bookId}` | Removes a book from the database. |
+| `PUT` | `/api/users/{userId}/promote` | Promotes a regular user to an admin. |
+| `PUT` | `/api/users/{userId}/addcrime` | Adds a penalty or "crime" to a user's record. |
 
 ## Contributing
 
