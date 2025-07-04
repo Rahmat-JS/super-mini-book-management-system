@@ -1,7 +1,6 @@
 const http = require('http');
 const router = require('./router');
-
-const PORT = 3000;
+const {PORT} = require('./config');
 
 const server = http.createServer(router);
 

@@ -1,4 +1,4 @@
-const fs = require('fs');
+const {fs} = require('../lib/fs');
 
 fs.writeFile('db.json', JSON.stringify({
     'users': [],
